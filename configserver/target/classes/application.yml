@@ -1,0 +1,18 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+          search-paths: config
+          uri: https://github.com/daxiong182/start-springcloud.git
+          username: daxiong182
+          password: k4991982
+      label: master
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
